@@ -1,0 +1,442 @@
+/*===============
+GENERAL
+=================*/
+
+*{
+  margin: 0;
+  padding: 0;
+
+}
+
+#container{
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+h1{
+font-size: 1.3em;
+
+margin: 0;
+font-family: 'Merriweather';
+}
+
+h2{
+  font-size: .90em;
+  color: #777;
+}
+
+h3{
+    text-align: center;
+    color: #777;
+    font-style: italic;
+    padding-bottom: 20px;
+}
+
+legend{
+font-size: 1.5em;
+font-weight: bold;
+padding-top: 30px;
+margin-bottom: 20px;
+font-family: 'Merriweather';
+
+
+}
+
+header{
+  color: white;
+  background-color: #1D2951;
+  padding: 10px 0;
+  padding-top: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+form{
+  width: 370px;
+  background-color: #ddd;
+  padding-top: 20px;
+
+}
+fieldset{
+  border: none;
+
+}
+
+label{
+padding: 0;
+margin: 0;
+  }
+
+
+.solid{
+  border-top: 6px solid #1D2951;
+}
+
+hr{
+border-top: 3px solid #1D2951;
+
+}
+
+/*===============
+form
+=================*/
+.type_form label {
+  display:block;
+  float: left;
+  font-size: 1em;
+  font-weight: 400;;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  color: #777;
+
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select[id="state"]{
+  background: #eee;
+  width: 90%;
+  height: 50px;
+  font-size: 1.2em;
+  height: auto;
+  display:block;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  border: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 10px;
+
+}
+
+
+
+input[type="text"]:focus,
+input[type="email"]:focus{
+  text-align: left;
+  border-color:#1D2951;
+  display: flex;
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select[id="state"]{
+  border: 1px #1D2951;
+
+}
+
+
+select[id="state"] {
+  height: 70px;
+
+}
+
+input[id="zip"]{
+width: 50%;
+margin-top: 10px;
+}
+
+
+input[placeholder="Required"]{
+  font-style: italic;
+  text-align: right;
+  font-family: serif;
+}
+
+
+
+ label[for="zip"] + input{
+   width: 160px;
+ }
+
+form > h1,
+form > p{
+text-align: center;
+
+}
+
+fieldset > h1{
+text-align: left;
+margin-bottom: 30px;
+}
+
+
+
+/*===============
+CHECKBOXES
+=================*/
+.checkbox_form{
+  margin-left: 10px;
+
+}
+
+.checkbox_form > input[type="checkbox"]{
+  margin: 10px 0;
+}
+
+.checkbox_form > label{
+  margin-left: 5px;
+  color: #777;
+}
+
+
+input[type="checkbox"]{
+  display: none;
+}
+
+input[type="checkbox"] + label{
+  display: block;
+  margin: 10px;
+  position: relative;
+  padding-left: 25px;
+  line-height: 20px;
+
+}
+
+input[type="checkbox"] + label::before{
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  background-color: white;
+  position: absolute;
+  left: -15px;
+  overflow: hidden;
+  margin-left: 10px;
+}
+
+input[type="checkbox"]:checked + label::before {
+content: '\2714';
+text-align: center;
+font-size: 1em;
+color: #1D2951;
+border: 2px solid #1D2951;
+
+}
+
+
+
+/*===============
+RADIO
+=================*/
+
+.radio_form{
+  margin-top: 10px;
+  /*margin-left: 10px;*/
+
+}
+
+.radio_form > input[type="radio"]{
+  margin: 10px;
+}
+
+.radio_form > label,
+.radio_form h2,
+.radio_form p{
+  margin-left: 10px;
+  color: #777;
+}
+
+
+.radio_form p{
+  color: #777;
+
+}
+
+
+input[type="radio"]{
+display: none;
+}
+
+input[type="radio"] + label{
+  display: block;
+  margin: 10px 0 10px -2px;
+  position: relative;
+  padding-left: 40px;
+  line-height: 20px;
+}
+
+input[type="radio"] + label::before{
+  content: '';
+  text-align: center;
+  display: inline-block;
+  position: absolute;
+  margin-left: 10px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  line-height: 50%;
+
+
+}
+
+input[type="radio"]:checked + label::before {
+  content:'';
+  text-align: center;
+  background-color: #1D2951;
+  color: #1D2951;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #1D2951;
+  border-radius: 100%;
+  box-shadow: inset 0px 0px 0px 3px white;
+  display: block;
+
+}
+
+
+textarea{
+  width: 300px;
+  height: 100px;
+  border-radius: 4px;
+  background: #eee;
+  resize: none;
+  border-style: none;
+  display: block;
+  /*margin-left: 7%;*/
+  margin: 0 auto;
+}
+
+button{
+  width: 90%;
+  height: 70px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 4px;
+  background: #1ad4bd;
+  border-style: none;
+  font-size: 1.5em;
+  color: white;
+  font-family: serif;
+  font-weight: 400;
+}
+
+
+
+/*===============
+Media Queries
+=================*/
+
+@media screen and (min-width: 768px){
+
+  *{
+    margin: 0;
+    padding: 0;
+
+  }
+.solid{
+  margin-top: 10px;
+}
+
+  br{
+    display: none;
+
+  }
+
+
+
+  #container{
+    max-width: 768px;
+    margin: 0 auto;
+  }
+
+
+  hr{
+    width: 95%;
+    margin: 0 auto;
+
+  }
+
+  legend{
+    margin-left: 10px;
+
+  }
+
+  form{
+    width: 90%;
+    margin: 0 auto;
+  }
+
+
+  .type_form label {
+    display:block;
+    text-align: right;
+    font-size: 1.2em;
+    font-weight: 400;
+    width:130px;
+    margin-top: 25px;
+    margin-bottom: 35px;
+  }
+
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select[id="state"]
+  {
+    width: 70%;
+    float: left;
+    margin-left: 20px;
+  }
+
+.type_form [for="state"]{
+  padding-top: 10px;
+
+}
+select[id="state"]{
+  width: 71%;
+
+}
+
+
+
+.checkbox_form,
+.radio_form{
+  font-size: 1.1em;
+
+
+}
+
+input[type="checkbox"],
+.checkbox_form label,
+input[type="radio"],
+.radio_form label{
+padding-top: 10px;
+}
+
+
+.radio_form{
+  width: 100%;
+
+}
+
+
+
+.radio_form p {
+  padding-top: 20px;
+  margin-bottom: 0;
+  text-align: left;
+
+}
+
+.radio_form textarea{
+  width: 90%;
+  display: block;
+  margin: 20px auto;
+  padding: 0;
+}
+
+button{
+  clear: both;
+
+}
+}
